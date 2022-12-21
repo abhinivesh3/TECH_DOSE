@@ -2,13 +2,15 @@ import java.util.Arrays;
 
 class Heap {
     static void heapify(int[] arr, int N, int index) {
-        int left = index << 1;
-        int right = (index << 1) | 1;
+        int left = index << 1;// (2*i+1);
+        int right = (index << 1) | 1;// (2*i+2);
         int largest = index;
-        if (left < N && arr[left] > arr[largest])
+        if (left < N && arr[left] > arr[largest]) {
             largest = left;
-        if (right < N && arr[right] > arr[largest])
+        }
+        if (right < N && arr[right] > arr[largest]) {
             largest = right;
+        }
         if (largest != index) {
             swap(arr, largest, index);
             heapify(arr, N, largest);
