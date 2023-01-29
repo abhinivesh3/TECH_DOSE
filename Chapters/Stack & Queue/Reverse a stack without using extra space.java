@@ -56,4 +56,4 @@ public class Reverse a stack without using extra space {
             stack.display();
         }
 }
-}
+
